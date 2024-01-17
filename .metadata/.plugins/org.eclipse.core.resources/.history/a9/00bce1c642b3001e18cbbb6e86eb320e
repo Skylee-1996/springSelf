@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+<jsp:include page="../layout/header.jsp"></jsp:include>
+<form action="/member/login" method="post" > 
+<div class="mb-3">
+  <label for="e" class="form-label">Email</label>
+  <input type="email" class="form-control" name="email" id="e" placeholder="email..">
+</div>
+<div class="mb-3">
+  <label for="p" class="form-label">PassWord</label>
+  <input type="password" class="form-control" name="pwd" id="p" placeholder="password">
+</div>
+
+<button type="submit" class="btn btn-primary" id="regBtn">Register</button>
+<jsp:include page="../layout/footer.jsp"></jsp:include>

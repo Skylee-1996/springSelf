@@ -1,0 +1,36 @@
+
+1월 08, 2024 09:47:01.903 NEW SESSION
+1월 08, 2024 09:47:01.903 [8764:13692:0108/094701.902:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
+1월 08, 2024 10:14:25.528 [8764:3620:0108/101425.527:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget
+1월 08, 2024 10:14:25.528 [8764:3620:0108/101425.527:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget
+1월 08, 2024 10:54:04.946 [8764:3620:0108/105404.946:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 08, 2024 10:57:08.553 [8764:3620:0108/105708.553:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 08, 2024 13:02:41.262 [8764:3620:0108/130241.262:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 08, 2024 14:03:24.370 [8764:3620:0108/140324.370:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 08, 2024 14:04:43.612 [8764:3620:0108/140443.611:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 08, 2024 14:30:19.497 [8764:3620:0108/143019.497:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+
+1월 09, 2024 08:52:31.12 NEW SESSION
+1월 09, 2024 08:52:31.12 [9600:2280:0109/085231.011:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 09:02:38.144 [9600:2280:0109/090238.143:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 09, 2024 09:54:48.449 [9600:2280:0109/095448.449:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 09:54:54.936 [9600:2280:0109/095454.936:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 09:55:42.943 [9600:2280:0109/095542.943:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 11:17:40.865 [9600:2280:0109/111740.865:ERROR:interface_endpoint_client.cc(702)] Message 5 rejected by interface blink.mojom.WidgetHost
+1월 09, 2024 12:32:45.602 [9600:2280:0109/123245.602:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 09, 2024 13:00:55.735 [9600:2280:0109/130055.735:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:01:49.773 [9600:2280:0109/130149.773:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:04:58.05 [9600:2280:0109/130458.005:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:05:18.92 [9600:2280:0109/130518.092:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:42:57.441 [9600:2280:0109/134257.441:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:48:28.916 [9600:2280:0109/134828.916:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 13:51:16.157 [9600:2280:0109/135116.157:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 09, 2024 14:33:46.123 [9600:2280:0109/143346.122:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+
+1월 10, 2024 09:25:52.426 NEW SESSION
+1월 10, 2024 09:25:52.427 [3384:8584:0110/092552.425:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 10, 2024 09:26:36.352 [3384:8584:0110/092636.352:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 10, 2024 09:27:37.403 [3384:8584:0110/092737.403:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 10, 2024 10:20:23.335 [3384:8584:0110/102023.335:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 10, 2024 12:44:39.119 [3384:8584:0110/124439.119:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 10, 2024 15:01:56.464 [3384:8584:0110/150156.464:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)

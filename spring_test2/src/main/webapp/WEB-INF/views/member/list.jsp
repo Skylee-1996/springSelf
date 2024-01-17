@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+    
+    
+<jsp:include page="../layout/header.jsp"></jsp:include>
+<div class="container-md">
+<h1>즐거운 게시판</h1>
+<!-- 검색라인  -->
+<div>
+<form action="/board/list" method="get">
+<div class="input-group">
+	<select name="type"  class="form-select"  aria-label="Example select with button addon" id="inputGroupSelect04">
+		<option ${ph.pgvo.type==null ? 'selected' : '' }>Choose...</option>
+		<option value="t" ${ph.pgvo.type eq 't' ? 'selected' : '' }>Title</option>
+		<option value="w" ${ph.pgvo.type eq 'w' ? 'selected' : '' }>Writer</option>
+		<option value="c" ${ph.pgvo.type eq 'c' ? 'selected' : '' }>Content</option>
+		<option value="tc" ${ph.pgvo.type eq 'tc' ? 'selected' : '' }>Title&Content</option>
+		<option value="tw" ${ph.pgvo.type eq 'tw' ? 'selected' : '' }>Title&Writer</option>
+		<option value="wc" ${ph.pgvo.type eq 'wc' ? 'selected' : '' }>Writer&Content</option>
+		<option value="twc" ${ph.pgvo.type eq 'twc' ? 'selected' : '' }>All</option>
+	</select>
+	<input type="text" style="border: 1px solid black; margin-left:30px;" name="keyword" value="${ph.pgvo.keyword }" placeholder="Search...">
+	<input type="hidden" name="pageNo" value="1">
+	<input type="hidden" name="qty" value="10">
+	<button type="submit" id="search" class="btn btn-outline-secondary">Search 
+	<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    ${ph.totalCount}
+    <span class="visually-hidden">unread messages</span>
+  </span></button>
+ 
+
+</div>
+</form>
+</div>
+
+
+<br>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">email</th>
+      <th scope="col">nickName</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<c:forEach items="${list }" var="mvo">
+    <tr>
+      <th scope="row">${mvo.email }</th>
+      <td><a href="/member/detail?email=${mvo.email }">${mvo.email }</a>
+      </td>
+      <td>${mvo.nickName }</td>
+    </tr>
+    </c:forEach>
+  </tbody>
+</table>
+
+</div>
+
+
+<jsp:include page="../layout/footer.jsp"></jsp:include>
+    
