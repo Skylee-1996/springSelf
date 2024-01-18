@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+   
+}
+.maintop{
+    width: 1200px;
+    height: 100vh;
+    background-image: url(/resources/image/maintop.png);
+}

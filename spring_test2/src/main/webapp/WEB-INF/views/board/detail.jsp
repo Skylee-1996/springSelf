@@ -77,14 +77,15 @@
 				class="btn btn-primary">List</button></a>
 
 
-		<sec:authentication property="principal.mvo.email" var="authEmail" />
-		<c:if test="${authEmail  eq bvo.writer }">
-			<a href="/board/modify?bno=${bvo.bno }"><button type="button"
-					class="btn btn-success">Modify</button></a>
-			<a href="/board/remove?bno=${bvo.bno }"><button type="button"
-					class="btn btn-danger">delete</button></a>
-		</c:if>
-
+		<sec:authorize access="isAuthenticated()">
+			<sec:authentication property="principal.mvo.email" var="authEmail" />
+			<c:if test="${authEmail  eq bvo.writer }">
+				<a href="/board/modify?bno=${bvo.bno }"><button type="button"
+						class="btn btn-success">Modify</button></a>
+				<a href="/board/remove?bno=${bvo.bno }"><button type="button"
+						class="btn btn-danger">delete</button></a>
+			</c:if>
+		</sec:authorize>
 
 	</div>
 

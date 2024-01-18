@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.maintop {
+    background-image: url('/path/to/maintop.png'); /* 이미지 경로를 정확하게 설정하세요 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* 높이를 화면의 100%로 설정 */
+}

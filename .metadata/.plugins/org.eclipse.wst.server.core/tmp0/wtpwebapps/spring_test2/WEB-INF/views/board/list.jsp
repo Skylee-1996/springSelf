@@ -5,7 +5,7 @@
     
 <jsp:include page="../layout/header.jsp"></jsp:include>
 <div class="container-md">
-<h1>즐거운 게시판</h1>
+<h1>공지사항</h1>
 <!-- 검색라인  -->
 <div>
 <form action="/board/list" method="get">

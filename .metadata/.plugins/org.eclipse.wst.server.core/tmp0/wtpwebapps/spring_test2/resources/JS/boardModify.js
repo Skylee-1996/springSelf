@@ -4,7 +4,7 @@ document.addEventListener("click", (e)=>{
     if(e.target.classList.contains('file-x')){
         let uuid = e.target.dataset.uuid;
         console.log(uuid);
-        removeFileToServer(uuid).then(result=>{
+        removeFileToServer(uuid).then(reuslt=>{
             if(result ==="1"){
                 alert("파일삭제성공");
                 e.target.closest('li').remove();

@@ -60,6 +60,6 @@
   						</trim>
   					</foreach>
   				</trim>
-  		</if>
-  	</sql>
+  			</if>
+  		</sql>
   </mapper>
