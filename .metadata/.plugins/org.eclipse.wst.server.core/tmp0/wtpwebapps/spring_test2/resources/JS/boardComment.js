@@ -73,6 +73,7 @@ async function spreadCommentList(bno, page=1){
                 div.innerHTML = "";
             }
             for(let i =0; i<result.cmtList.length; i++){
+                console.log('authEmail:', authEmail, 'Writer:', result.cmtList[i].writer);
                 let add = `<div class="accordion-item" data-cno="${result.cmtList[i].cno}" data-writer="${result.cmtList[i].writer}">`;
                 add += `<h2 class="accordion-header">`;
                 add += `<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">`;
@@ -80,8 +81,10 @@ async function spreadCommentList(bno, page=1){
                 add += `</h2>`;
                 add += `<div id="collapse${i}" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">`
                 add += `<div class="accordion-body">`;
+                if(authEmail === result.cmtList[i].writer){
                 add += `<button type="button" data-cno="${result.cmtList[i].cno}" class="btn btn-outline-danger btn-sm mod" data-bs-toggle="modal" data-bs-target="#myModal">수정</button>`;
                 add += `<button type="button" data-cno="${result.cmtList[i].cno}" class="btn btn-outline-warning btn-sm cmtDelBtn">삭제</button>`;
+                }
                 add += `<input type="text" class="form-control cmtText" value=${result.cmtList[i].content}>`
                 add += `</div></div></div>`;
                 div.innerHTML += add;

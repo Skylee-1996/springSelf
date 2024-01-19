@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -13,9 +15,11 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myweb.www.security.MemberVO;
@@ -114,6 +118,20 @@ public class MemberController {
 	private void logout(HttpServletRequest request, HttpServletResponse response) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		new SecurityContextLogoutHandler().logout(request, response, authentication);
+	}
+	
+	
+	@GetMapping("/check/{email}")
+	public ResponseEntity<String> check(@PathVariable("email") String email){
+		log.info(">>>email check><>>>{}", email);
+		MemberVO mvo = msv.emailCheck(email);
+		int isOk = 0;
+		if(mvo == null) {
+			isOk = 1;
+		}
+		
+		return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK) : 
+			new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 }

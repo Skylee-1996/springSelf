@@ -1,0 +1,33 @@
+let emailCheck = false;
+let passwordCheck = false;
+
+document.getElementById("button-addon2").addEventListener("click",()=>{
+    let email = document.getElementById("e")
+    if(email.value == null || email.value == ''){
+        alert('이메일을 입력해주세요');
+        email.focus();
+        return false;
+      }else{
+        console.log(email.value);
+        checkEmailFromServer(email.value).then(result=>{
+            if(result=='1'){
+                alert("사용할 수 있는 아이디입니다.")
+                emailCheck="true";
+            }else{
+                alert("사용할 수 없는 아이디 입니다.")
+            }
+        })
+        
+      }
+})
+
+
+async function checkEmailFromServer(email){
+    try{
+        const resp = await fetch("/member/check/"+email);
+        const result = await resp.text(); 
+        return result;
+    }catch(error){
+        console.log(error);
+    }
+}

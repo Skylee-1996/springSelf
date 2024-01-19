@@ -42,7 +42,9 @@
 	<delete id="delete">
 		delete from member where email = #{email}
 	</delete>
-	
+	<select id="checkEmail" resultType="com.myweb.www.security.MemberVO" >
+		select * from member where email = #{email}
+	</select>
 	
 
 </mapper> 

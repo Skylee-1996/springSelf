@@ -20,4 +20,7 @@ public interface MemberService {
 
 	void delete(String email);
 
+	MemberVO emailCheck(String email);
+
+
 }

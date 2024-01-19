@@ -29,4 +29,6 @@ public interface MemberDAO {
 
 	void delete(String email);
 
+	MemberVO checkEmail(String email);
+
 }

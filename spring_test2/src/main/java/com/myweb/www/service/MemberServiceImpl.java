@@ -76,4 +76,10 @@ public class MemberServiceImpl implements MemberService{
 		mdao.delete(email);
 		
 	}
+
+
+	@Override
+	public MemberVO emailCheck(String email) {
+		return mdao.checkEmail(email);
+	}
 }

@@ -95,7 +95,7 @@
 	<hr>
 	<!--댓글등록라인-->
 	<div class="input-group mb-3">
-		<span class="input-group-text" id="cmtWriter">${bvo.writer }</span> <input
+		<span class="input-group-text" id="cmtWriter">${authEmail }</span> <input
 			type="text" class="form-control" id="cmtText"
 			placeholder="Add Comment...">
 		<button class="btn btn-outline-secondary" type="button"
@@ -136,7 +136,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Writer</h5>
+				<h5 class="modal-title">${authEmail }</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 			</div>
@@ -156,7 +156,9 @@
 
 <script type="text/javascript">
 	let bnoVal = `<c:out value="${bdto.bvo.bno}" />`;
+	let authEmail =  `<c:out value="${authEmail}" />`;
 	console.log(bnoVal);
+	console.log(authEmail);
 </script>
 
 <script src="/resources/JS/boardComment.js"></script>
