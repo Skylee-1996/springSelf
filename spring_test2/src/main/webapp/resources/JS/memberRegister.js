@@ -56,11 +56,11 @@ function pcheck(){
     let pc = document.getElementById("pc").value;
     let checkpass = document.getElementById("checkpass");
     if (p === pc) {
-        checkpass.textContent = "비밀번호가 일치합니다."; // Passwords match
+        checkpass.textContent = "비밀번호가 일치합니다."; 
         checkpass.style.color = "green";
         passwordCheck = true;
     } else {
-        checkpass.textContent = "비밀번호가 일치하지 않습니다."; // Passwords do not match
+        checkpass.textContent = "비밀번호가 일치하지 않습니다."; 
         checkpass.style.color = "red";
         passwordCheck = false;
     }
